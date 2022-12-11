@@ -1,0 +1,41 @@
+# Get All items
+GET  http://localhost:3000/items/fetchAll
+
+###
+
+# To submit items
+POST http://localhost:3000/items/create
+content-type: application/json
+
+{
+    "name": "comic",
+    "price": "12.5",
+    "manuf": "ChandPublisher",
+    "md": "31/12/2021"
+}
+
+###
+
+# To update Item
+
+PUT  http://localhost:3000/items/update/2
+content-type: application/json
+
+{
+    "id":1,
+    "name": "a",
+    "price": "12.5",
+    "manuf": "ChandPublisher",
+    "md": "31/12/2021"
+}
+
+###
+
+# To delete item
+DELETE http://localhost:3000/items/delete/2
+
+
+###
+
+# To findById item
+GET http://localhost:3000/items/findById/4

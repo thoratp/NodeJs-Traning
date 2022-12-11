@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link,
+        a:visited {
+            background-color: grey;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            width: 150px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        a:hover,
+        a:active {
+            background-color: grey;
+        }
+
+        /* table css */
+        table,
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        /* Add padding to containers */
+        .container {
+            border: 3px solid #f1f1f1;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <%=welcomeMsg %>
+        </h2>
+        <table>
+            <tr>
+                <td>Sr No.</td>
+                <td>Owner</td>
+                <td>Thoughts</td>
+
+            </tr>
+
+            <% for (var i=0; i < thoughts.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= i %>
+                    </td>
+                    <td>
+                        <%= thoughts[i].owner %>
+                    </td>
+                    <td>
+                        <%= thoughts[i].thought %>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+        <br />
+
+        <a href="/home"> Back To Home Page</a>
+        <a href="/create-thoughts"> Post A Thought</a>
+
+    </div>
+
+</body>
+
+</html>
