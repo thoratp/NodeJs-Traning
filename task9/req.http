@@ -1,0 +1,37 @@
+GET http://localhost:3000/app/movies
+
+###
+
+POST http://localhost:3000/app/movies
+content-type: application/json
+
+{
+    "director": "Maulik", 
+    "title": "Spiderman with Joker", 
+    "rating": 4.9
+}
+
+###
+
+GET http://localhost:3000/app/movies/findById/3
+
+###
+
+GET  http://localhost:3000/app/movies/title/Joker
+
+###
+
+PUT http://localhost:3000/app/movies/2
+content-type: application/json
+
+{
+    "director": "adaaaaas", 
+    "title": "Joker", 
+    "rating": 4.9
+}
+
+###
+
+DELETE  http://localhost:3000/app/movies/3
+
+###
